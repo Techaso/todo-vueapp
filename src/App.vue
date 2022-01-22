@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1 style="color:green;">Create Your To-Do List</h1>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <todo-list v-bind:todos="todos"></todo-list>
     <create-todo v-on:create-todo="addTodo"></create-todo>
@@ -19,24 +20,10 @@ export default {
   },
   data() {
         return {
-            todos: [{
-              title: 'Todo A',
-              project: 'Project A',
-              done: false,
-            },
+            todos: [
             {
-              title: 'Todo B',
-              project: 'Project B',
-              done: true,
-            },
-            {
-              title: 'Todo C',
-              project: 'Project C',
-              done: false,
-            },
-            {
-              title: 'Todo D',
-              project: 'Project D',
+              title: 'Market',
+              project: 'Buy Maggi packets',
               done: false,
             }]
         }
@@ -63,5 +50,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+body {
+  background-image: url("./assets/img/bg.png");
 }
 </style>
